@@ -28,6 +28,7 @@ body {
   overflow-x: hidden;
   z-index: 0;
 }
+
 .nav-container,
 .container {
   width: 100%;
@@ -63,7 +64,7 @@ nav {
 }
 
 .social-link {
-list-style: none;
+  list-style: none;
 }
 
 .social-link svg {
@@ -95,22 +96,6 @@ list-style: none;
   list-style: none;
   cursor: pointer;
 }
-
-/* #nav-list li::after {
-    content: "";
-    width: 0;
-    opacity: 0;
-    height: 1px;
-    background-color: var(--light-color);
-    display: block;
-    margin: 2px auto;
-    transition: all 500ms ease-in-out;
-  }
-  
-#nav-list li:hover::after {
-    width: 100%;
-    opacity: 90%;
-  } */
 
 .nav-link {
   font-weight: 500;
@@ -212,12 +197,12 @@ list-style: none;
 }
 
 #hero-info h5 {
-    margin: 0;
-    padding: 1em 0;
-    font-size: 22px;
-    font-weight: 300;
-    text-align: center;
-  }
+  margin: 0;
+  padding: 1em 0;
+  font-size: 22px;
+  font-weight: 300;
+  text-align: center;
+}
 
 #program,
 #speakers,
@@ -341,7 +326,6 @@ list-style: none;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 1.25em;
   row-gap: 1.25em;
-  width: 95%;
 }
 
 .speaker-card {
@@ -433,7 +417,7 @@ list-style: none;
     line-height: 88px;
     text-align: left;
   }
-  
+
   .container {
     width: 90%;
     max-width: 1044px;
@@ -447,7 +431,7 @@ list-style: none;
     width: 100%;
     max-width: 1044px;
   }
-  
+
   .hero-container {
     margin-top: 10rem;
     justify-content: flex-start;
@@ -460,12 +444,11 @@ list-style: none;
   }
 
   #hero-text {
-  margin: 0.75em 0 0.25em 0;
-  font-size: 20px;
-  text-align: justify;
-  width: 80%;
+    margin: 0.75em 0 0.25em 0;
+    font-size: 20px;
+    text-align: justify;
+    width: 80%;
   }
-
 
   #hero-info h4 {
     margin: 0;
@@ -474,7 +457,7 @@ list-style: none;
     font-weight: 800;
     text-align: left;
   }
-  
+
   #hero-info h5 {
     margin: 0;
     font-size: 36px;
@@ -511,7 +494,7 @@ list-style: none;
     width: 100%;
     flex: 1 0 100%;
   }
-  
+
   .program-text {
     margin: 0;
     padding: 0 0.25em;
@@ -544,13 +527,13 @@ list-style: none;
     font-size: 14px;
     font-weight: 500;
   }
-  
+
   .speaker-text {
-  font-size: 0.85em;
+    font-size: 0.85em;
     font-weight: 300;
     height: 75%;
   }
-  
+
   #partners-list li {
     width: 18em;
     height: 12em;
