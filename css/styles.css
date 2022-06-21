@@ -284,7 +284,7 @@ list-style: none;
 #learn,
 #explore,
 #future {
-  background-image: url(/img/lecture.png);
+  background-image: url(./img/lecture.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -294,23 +294,23 @@ list-style: none;
 }
 
 #meet {
-  background-image: url(/img/meet.png);
+  background-image: url(./img/meet.png);
 }
 
 #learn {
-  background-image: url(/img/learn.png);
+  background-image: url(./img/learn.png);
   width: 60%;
   height: 60%;
 }
 
 #explore {
-  background-image: url(/img/explore.png);
+  background-image: url(./img/explore.png);
   width: 60%;
   height: 60%;
 }
 
 #future {
-  background-image: url(/img/adventurer.png);
+  background-image: url(./img/adventurer.png);
 }
 
 .progam-title {
