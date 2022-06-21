@@ -1,23 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.cdnfonts.com/css/cocogoose" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./CSS/Styles.css">
     <title>M1 - Open Source Summit</title>
     <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
 </head>
+
 <body>
     <nav>
-        <div class="top-social">
-            <ul>
-                <li><a href="https://twitter.com/linuxfoundation" class="social-link"></a></li>
-                <li><a href="https://www.linkedin.com/company/the-linux-foundation/" class="social-link"></a></li>
-                <li><a href="https://www.youtube.com/user/TheLinuxFoundation" class="social-link"></a></li>
-                <li><a href="https://www.facebook.com/TheLinuxFoundation/" class="social-link"></a></li>
-            </ul>
+        <div id="social-bar">
+            <div class="container">
+             <ul>
+                <li class="social-link"><a rel="noopener" title="Twitter" target="_blank" href="https://twitter.com/linuxfoundation"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></a></li>
+                <li class="social-link"><a rel="noopener" title="Linkedin" target="_blank" href="https://www.linkedin.com/company/the-linux-foundation/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></a></li>
+                <li class="social-link"><a rel="noopener" title="YouTube" target="_blank" href="https://www.youtube.com/user/TheLinuxFoundation"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></a></li>
+                <li class="social-link"></a><a rel="noopener" title="Facebook" target="_blank" href="https://www.facebook.com/TheLinuxFoundation/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg></a></li>
+             </ul>
+            </div>
+        </div>
+
+        <div id="nav-bar">
+            <div class="nav-cont container">
+                <div id="nav-logo"></div>
+                <ul id="nav-list">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#program" class="nav-link">Program</a></li>
+                    <li><a href="#speakers" class="nav-link">Speakers</a></li>
+                    <li><a href="#partners" class="nav-link">Partners</a></li>
+                    <li><a href="./about.html" class="nav-link about">About</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
+
+    <section id="home" class="hero">
+        <div class="section-container">
+            <h3>You have been waiting for this</h3>
+            <h1 id="hero-title">Open Source Summit 2022</h1>
+            <div id="hero-text">
+                <p>Open Source Summit is the premier event for open source developers, technologists, and community
+                    leaders to collaborate, share information, solve problems, and gain knowledge, furthering open
+                    source innovation and ensuring a sustainable open source ecosystem. It is the gathering place for
+                    open-source code and community contributors.</p>
+            </div>
+            <div id="hero-info">
+                <h4>📆 June 21 - 24 🇺🇸 Austin, Texas</h4>
+                <h5>#OSSUMMIT</h5>
+            </div>
+        </div>
+    </section>
+
+    <section id="program">
+        <h3 class="section-title">Main Program</h3>
+        <div id="program-container">
+            <div class="program-card">
+                <h4 class="progam-title">Lecture</h4>
+                <p class="program-text">Access leading experts to learn how to navigate the complex open source
+                    environment</p>
+            </div>
+            <div class="program-card">
+                <h4 class="progam-title">Meet</h4>
+                <p class="program-text">Learn about the latest trends in open source and open technologies</p>
+            </div>
+            <div class="program-card">
+                <h4 class="progam-title">Learn</h4>
+                <p class="program-text">Gain a competitive advantage by learning about the latest in innovative open
+                    solutions </p>
+            </div>
+            <div class="program-card">
+                <h4 class="progam-title">Explore</h4>
+                <p class="program-text">Explore career opportunities with the world’s leading technology companies</p>
+            </div>
+            <div class="program-card">
+                <h4 class="progam-title">Future</h4>
+                <p class="program-text">Find out what industry-leading companies and projects are doing in the future,
+                    and where technologies are headed</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="speakers">
+        <h3 class="section-title">Featured Speakers</h3>
+        <div id="speaker-container"></div>
+    </section>
+
+    <section id="partners">
+        <h3 class="section-title">Partners</h3>
+        <ul>
+            <li><a target="_blank" rel="noopener" href="https://aws.amazon.com/" class="partner"><img
+                        src="https://events.linuxfoundation.org/wp-content/uploads/amazon-web-services-spn.svg"
+                        alt=""></a></li>
+            <li><a target="_blank" rel="noopener" href="https://opensource.google/" class="partner"><img
+                        src="https://events.linuxfoundation.org/wp-content/uploads/google-logo-web.svg" alt=""></a></li>
+            <li><a target="_blank" rel="noopener" href="http://developer.ibm.com/" class="partner"><img
+                        src="https://events.linuxfoundation.org/wp-content/uploads/2020/10/ibm-horizontal-color-2.svg"
+                        alt=""></a></li>
+            <li><a target="_blank" rel="noopener" href="https://www.redhat.com/" class="partner"><img
+                        src="https://events.linuxfoundation.org/wp-content/uploads/RedHat-new.svg" alt=""></a></li>
+            <li><a target="_blank" rel="noopener" href="http://www.intel.com/" class="partner"><img
+                        src="https://events.linuxfoundation.org/wp-content/uploads/2020/01/intel-01.svg" alt=""></a>
+            </li>
+            <li><a target="_blank" rel="noopener" href="https://www.cncf.io/" class="partner"><img
+                        src="https://events.linuxfoundation.org/wp-content/uploads/cncf.svg" alt=""></a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <div id="footer-container">
+            <div id="footer-logo"></div>
+            <div id="footer-social">
+                <ul>
+                    <li class="social-link"><a class="twitter" href="https://twitter.com/linuxfoundation"></a></li>
+                    <li class="social-link"><a class="linkedin"
+                            href="https://www.linkedin.com/company/the-linux-foundation/"></a></li>
+                    <li class="social-link"><a class="youtube"
+                            href="https://www.youtube.com/user/TheLinuxFoundation"></a></li>
+                    <li class="social-link"><a class="facebook" href="https://www.facebook.com/TheLinuxFoundation/"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer-trademark">
+            <p>Copyright © 2022 The Linux Foundation®. All rights reserved. The
+                Linux Foundation has registered trademarks and uses trademarks. For
+                a list of trademarks of The Linux Foundation, please see our <a target="_blank" rel="noopener"
+                    href="https://www.linuxfoundation.org/trademark-usage">Trademark Usage</a> page. Linux is a
+                registered trademark of Linus Torvalds. <a target="_blank" rel="noopener"
+                    href="https://www.linuxfoundation.org/terms/">Terms of Use</a> |
+                <a target="_blank" rel="noopener" href="https://www.linuxfoundation.org/privacy/">Privacy
+                    Policy</a> | <a target="_blank" rel="noopener"
+                    href="https://www.linuxfoundation.org/bylaws/">Bylaws</a> | <a target="_blank" rel="noopener"
+                    href="https://www.linuxfoundation.org/antitrust-policy/">Antitrust
+                    Policy</a> | <a target="_blank" rel="noopener"
+                    href="https://www.linuxfoundation.org/good-standing-policy/">Good
+                    Standing Policy</a>.
+            </p>
+        </div>
+    </footer>
 </body>
+
 </html>
