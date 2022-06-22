@@ -3,6 +3,7 @@
   --text-font: 'Lato', sans-serif;
   --accent-color: #ef513c;
   --dark-color: rgb(39, 42, 50);
+  --middle-color: #8d8d8d;
   --light-color: #d3d3d3;
   --light-color-trans: #8e8e8e3c;
 }
@@ -72,6 +73,12 @@ nav {
   fill: #fff;
   height: 1.25rem;
   width: 1.25rem;
+  transition: all 333ms ease-in-out;
+}
+
+.social-link svg:hover {
+  fill: var(--middle-color);
+  transform: scale(108%);
 }
 
 #nav-bar {
@@ -90,6 +97,7 @@ nav {
 
 #nav-list {
   width: 60%;
+  padding: 0;
   display: none;
   justify-content: space-around;
   align-items: center;
@@ -101,7 +109,7 @@ nav {
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
-  color: var(--light-color);
+  color: var(--middle-color);
   transition: all 200ms ease-in-out;
 }
 
@@ -119,8 +127,7 @@ nav {
   color: #4c2723;
 }
 
-#nav-logo,
-#footer-logo {
+#nav-logo {
   width: 90%;
   height: 90%;
   box-sizing: border-box;
@@ -137,7 +144,7 @@ nav {
   align-items: flex-start;
   background-color: rgba(241, 241, 241, 0.85);
   background-image: url(../img/hero-img.jpg);
-  background-position: center center;
+  background-position: top center;
   background-size: cover;
   background-blend-mode: color-dodge;
   background-attachment: fixed;
@@ -174,11 +181,11 @@ nav {
   line-height: 60px;
   font-family: var(--title-font);
   background-image: url(../img/hero-img.jpg);
-  background-position: center center;
+  background-position: top center;
   background-size: contain;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ef513cb3;
 }
 
 #hero-text {
@@ -215,9 +222,6 @@ nav {
   align-items: center;
   flex-wrap: wrap;
   background-color: var(--dark-color);
-  background-image: url(../img/pattern_bg.png);
-  background-repeat: repeat;
-  background-blend-mode: darken;
 }
 
 .section-title {
@@ -245,6 +249,12 @@ nav {
   opacity: 90%;
 }
 
+#program {
+  background-image: url(../img/pattern_bg.png);
+  background-repeat: repeat;
+  background-blend-mode: darken;
+}
+
 .program-container {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
@@ -269,7 +279,7 @@ nav {
 #learn,
 #explore,
 #future {
-  background-image: url(./img/lecture.png);
+  background-image: url(../img/lecture.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -279,23 +289,23 @@ nav {
 }
 
 #meet {
-  background-image: url(./img/meet.png);
+  background-image: url(../img/meet.png);
 }
 
 #learn {
-  background-image: url(./img/learn.png);
+  background-image: url(../img/learn.png);
   width: 60%;
   height: 60%;
 }
 
 #explore {
-  background-image: url(./img/explore.png);
+  background-image: url(../img/explore.png);
   width: 60%;
   height: 60%;
 }
 
 #future {
-  background-image: url(./img/adventurer.png);
+  background-image: url(../img/adventurer.png);
 }
 
 .progam-title {
@@ -342,7 +352,7 @@ nav {
 .speaker-info {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   padding: 0.25em 1em;
 }
@@ -374,6 +384,7 @@ nav {
 
 #partners {
   background-image: none;
+  padding-bottom: 6em;
 }
 
 #partners-list {
@@ -389,6 +400,75 @@ nav {
   height: 10em;
   margin: 1em 0;
   padding: 2em;
+}
+
+#footer {
+  background-color: #f9f9f9;
+  padding: 3em 0 1.5em;
+}
+
+#footer-container {
+  display: flex;
+  width: 90%;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#logo-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 30%;
+}
+
+#footer-logo svg {
+  width: 6em;
+  height: auto;
+  fill: #009ade;
+}
+
+#footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.25em;
+  margin: 0;
+  justify-content: space-around;
+  width: 80%;
+}
+
+ul#footer-social .link-social-footer svg {
+  display: block;
+  margin: 0.5em;
+  fill: #003764;
+  height: 1.25rem;
+  width: 1.25rem;
+  transition: all 333ms ease-in-out;
+}
+
+ul#footer-social .link-social-footer svg:hover {
+  fill: #009ade;
+  transform: scale(108%);
+}
+
+#footer-trademark {
+  width: 60%;
+  padding: 0;
+  color: var(--middle-color);
+  text-align: justify;
+  font-size: 13px;
+  line-height: 13px;
+}
+
+#footer-trademark h6 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+#footer-trademark a {
+  color: var(--dark-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -425,10 +505,9 @@ nav {
 
   .hero-container,
   .program-container,
-  .speaker-container,
   .footer-container {
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
     max-width: 1044px;
   }
 
@@ -469,10 +548,15 @@ nav {
     padding: 3em 0;
   }
 
+  .program-container {
+    height: 18em;
+  }
+
   .program-card {
     grid-column: span 3;
-    height: 14em;
+    height: 100%;
     padding-top: 1em;
+    padding-bottom: 1em;
     flex-wrap: wrap;
   }
 
@@ -507,8 +591,10 @@ nav {
   }
 
   #speaker-container {
-    width: 70%;
+    width: 75%;
     max-width: 1044px;
+    column-gap: 2em;
+    row-gap: 2.5em;
   }
 
   .speaker-card {
@@ -519,24 +605,49 @@ nav {
   .speaker-name {
     font-size: 22px;
     font-weight: 700;
-    height: 15%;
   }
 
   .speaker-title {
-    height: 10%;
     font-size: 14px;
     font-weight: 500;
+    padding: 1em 0;
   }
 
   .speaker-text {
     font-size: 0.85em;
     font-weight: 300;
-    height: 75%;
+    height: 85%;
   }
 
   #partners-list li {
     width: 18em;
     height: 12em;
     padding: 3em;
+  }
+
+  #footer-container {
+    flex-wrap: wrap;
+    max-width: 1044px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #logo-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 30%;
+  }
+
+  #footer-logo svg {
+    width: 12em;
+    height: auto;
+  }
+
+  #footer-trademark {
+    width: 60%;
+    text-align-last: left;
+    font-size: 14px;
+    line-height: 13px;
   }
 }
