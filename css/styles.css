@@ -2,6 +2,7 @@
   --title-font: 'COCOGOOSE', sans-serif;
   --text-font: 'Lato', sans-serif;
   --accent-color: #ef513c;
+  --accent-color-trans: #ef513caf;
   --dark-color: rgb(39, 42, 50);
   --dark-color-trans: rgba(39, 42, 50, 0.99);
   --middle-color: #8d8d8d;
@@ -38,6 +39,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.container p {
+  text-align: center;
 }
 
 .nav-container {
@@ -191,7 +196,8 @@ ul#nav-list.active {
   background-size: contain;
 }
 
-#home {
+#home,
+#about {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -205,12 +211,25 @@ ul#nav-list.active {
   height: fit-content;
 }
 
+#about {
+  padding: 15em 0 5em;
+  background-color: #fdfdfddf;
+  background-image: url(../img/hero2.jpg);
+}
+
 .hero-container,
+.about-container,
 .program-container,
 .footer-container {
   display: flex;
   flex-wrap: wrap;
   width: 85%;
+}
+
+.about-container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .hero-container {
@@ -227,7 +246,8 @@ ul#nav-list.active {
   text-align: center;
 }
 
-#hero-title {
+#hero-title,
+#about-title {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -242,11 +262,26 @@ ul#nav-list.active {
   color: #ef513cb3;
 }
 
-#hero-text {
+#about-title {
+  background-image: url(../img/hero2.jpg);
+}
+
+#hero-text,
+#about-text {
   margin: 0.75em 0 0.25em 0;
   font-size: 20px;
   width: 100%;
   text-align: center;
+}
+
+#about-text {
+  margin: 1em 0;
+  padding: 1.5em;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.754);
+  border-radius: 3px;
+  border: 2px solid var(--light-color-trans);
+  font-size: 16px;
 }
 
 #hero-info h4 {
@@ -268,7 +303,9 @@ ul#nav-list.active {
 #program,
 #speakers,
 #partners,
-#footer {
+#footer,
+#summit-logo,
+#past-summit {
   display: flex;
   height: fit-content;
   padding: 2em 0 10em;
@@ -278,8 +315,54 @@ ul#nav-list.active {
   background-color: var(--dark-color);
 }
 
+#summit-logo {
+  background-color: #fff;
+  padding: 3em 0;
+}
+
+#past-summit {
+  background-color: #fdfdfd;
+  padding: 3em 0;
+}
+
+#logo-img {
+  width: 12em;
+  height: 12em;
+  box-sizing: border-box;
+  background-image: url(../img/ossummit-logo.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.past-img,
+.past-img2 {
+  height: 7em;
+  margin: 0.75em;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--accent-color-trans);
+  background-image: url(../img/past-sumit2020.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: soft-light;
+  background-size: cover;
+  flex: 1 1 90%;
+  color: #fdfdfd;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.past-img2 {
+  background-image: url(../img/past-summit2021.jpg);
+}
+
 .section-title {
-  width: 100%;
+  width: 80%;
   text-align: center;
   text-transform: uppercase;
   font-size: 27px;
@@ -570,6 +653,7 @@ ul#footer-social .link-social-footer svg:hover {
   }
 
   .hero-container,
+  .about-container,
   .program-container,
   .footer-container {
     flex-wrap: wrap;
@@ -588,7 +672,8 @@ ul#footer-social .link-social-footer svg:hover {
     font-weight: 400;
   }
 
-  #hero-text {
+  #hero-text,
+  #about-text {
     margin: 0.75em 0 0.25em 0;
     font-size: 20px;
     text-align: justify;
@@ -715,5 +800,15 @@ ul#footer-social .link-social-footer svg:hover {
     text-align-last: left;
     font-size: 14px;
     line-height: 13px;
+  }
+
+  #logo-img {
+    height: 25em;
+    width: 25em;
+  }
+
+  .past-img,
+  .past-img2 {
+    flex: 0 1 40%;
   }
 }
