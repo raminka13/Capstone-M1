@@ -3,6 +3,7 @@
   --text-font: 'Lato', sans-serif;
   --accent-color: #ef513c;
   --dark-color: rgb(39, 42, 50);
+  --dark-color-trans: rgba(39, 42, 50, 0.99);
   --middle-color: #8d8d8d;
   --light-color: #d3d3d3;
   --light-color-trans: #8e8e8e3c;
@@ -81,6 +82,37 @@ nav {
   transform: scale(108%);
 }
 
+.mobile-menu {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  top: 1.25em;
+  left: 1.25em;
+}
+
+span.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  opacity: 99%;
+  background-color: var(--dark-color);
+  -webkit-transition: all 750ms ease-out;
+  transition: all 150ms ease-out;
+}
+
+.mobile-menu.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(135deg);
+}
+
+.mobile-menu.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-135deg);
+}
+
 #nav-bar {
   display: flex;
   justify-content: center;
@@ -95,17 +127,38 @@ nav {
   align-items: center;
 }
 
-#nav-list {
-  width: 60%;
+ul#nav-list {
+  width: 0;
   padding: 0;
-  display: none;
-  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 85px;
+  left: -200px;
+  height: 0;
+  background-color: var(--dark-color-trans);
+  border-radius: 5px;
   list-style: none;
-  cursor: pointer;
+  text-align: center;
+  transition: all 500ms ease-in-out;
+}
+
+ul#nav-list li {
+  padding: 0.75em;
+}
+
+ul#nav-list.active {
+  width: 100%;
+  height: 300px;
+  top: 85px;
+  left: 0;
 }
 
 .nav-link {
+  padding: 0;
+  margin: 0;
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
@@ -128,7 +181,7 @@ nav {
 }
 
 #nav-logo {
-  width: 90%;
+  width: 50%;
   height: 90%;
   box-sizing: border-box;
   background-image: url(../img/ossummit-logo.svg);
@@ -146,6 +199,7 @@ nav {
   background-image: url(../img/hero-img.jpg);
   background-position: top center;
   background-size: cover;
+  background-repeat: no-repeat;
   background-blend-mode: color-dodge;
   background-attachment: fixed;
   height: fit-content;
@@ -251,6 +305,7 @@ nav {
 
 #program {
   background-image: url(../img/pattern_bg.png);
+  background-attachment: fixed;
   background-repeat: repeat;
   background-blend-mode: darken;
 }
@@ -395,7 +450,7 @@ nav {
   justify-content: space-around;
 }
 
-#partners-list li {
+ul#partners-list li {
   width: 15em;
   height: 10em;
   margin: 1em 0;
@@ -476,13 +531,24 @@ ul#footer-social .link-social-footer svg:hover {
     display: flex;
   }
 
-  #nav-list {
+  ul#nav-list {
     display: flex;
+    position: relative;
+    background-color: #fdfdfd;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: auto;
   }
 
   .nav-cont {
     height: 80px;
     justify-content: space-between;
+  }
+
+  .mobile-menu {
+    display: none;
   }
 
   #nav-logo {
