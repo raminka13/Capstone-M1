@@ -422,6 +422,10 @@ ul#nav-list.active {
   font-weight: 400;
 }
 
+.program-btn {
+  margin: 2em 15em;
+}
+
 .join-btn {
   display: block;
   text-decoration: none;
