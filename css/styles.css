@@ -213,7 +213,6 @@ ul#nav-list.active {
 
 #about {
   padding: 15em 0 5em;
-  background-color: #fdfdfddf;
   background-image: url(../img/hero2.jpg);
 }
 
@@ -321,7 +320,7 @@ ul#nav-list.active {
 }
 
 #past-summit {
-  background-color: #fdfdfd;
+  background-color: #ecebef;
   padding: 3em 0;
 }
 
@@ -388,7 +387,6 @@ ul#nav-list.active {
 
 #program {
   background-image: url(../img/pattern_bg.png);
-  background-attachment: fixed;
   background-repeat: repeat;
   background-blend-mode: darken;
 }
