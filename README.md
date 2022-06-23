@@ -13,8 +13,8 @@ In this project we were required to follow design guidelines while coding a sema
 - **Linters Check:** Local and Pull Request Github workflows to check for stylistic errors, bugs and syntax errors in code.
 
 ## Live Demo 
-[Github Pages Demo](https://raminka13.github.io/Capstone-M1/)
-[Video Demo](https://youtu.be/_LSZU9BL6ek)
+- [Github Pages Demo](https://raminka13.github.io/Capstone-M1/)
+- [Video Demo](https://youtu.be/_LSZU9BL6ek)
 
 ## Author ✍🏼
 👤 **Raul A Ospina** 🧑🏻‍💻
