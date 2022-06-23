@@ -1,10 +1,10 @@
 :root {
   --title-font: 'COCOGOOSE', sans-serif;
   --text-font: 'Lato', sans-serif;
-  --accent-color: #ef513c;
-  --accent-color-trans: #ef513caf;
-  --dark-color: rgb(39, 42, 50);
-  --dark-color-trans: rgba(39, 42, 50, 0.99);
+  --accent-color: #dc5242;
+  --accent-color-trans: #ec5242af;
+  --dark-color: #272a31;
+  --dark-color-trans: #272131af;
   --middle-color: #8d8d8d;
   --light-color: #d3d3d3;
   --light-color-trans: #8e8e8e3c;
@@ -303,6 +303,7 @@ ul#nav-list.active {
 #speakers,
 #partners,
 #footer,
+#footer-about,
 #summit-logo,
 #past-summit {
   display: flex;
@@ -386,6 +387,7 @@ ul#nav-list.active {
 }
 
 #program {
+  padding: 2.5em 0 3em;
   background-image: url(../img/pattern_bg.png);
   background-repeat: repeat;
   background-blend-mode: darken;
@@ -408,6 +410,24 @@ ul#nav-list.active {
   align-items: center;
   justify-content: space-around;
   height: 7em;
+}
+
+.program-btn,
+.join-btn {
+  display: none;
+  margin: 2em;
+  text-transform: uppercase;
+  color: var(--light-color);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.join-btn {
+  display: block;
+  text-decoration: none;
+  background-color: var(--accent-color);
+  padding: 1.5em;
+  font-weight: 500;
 }
 
 #lecture,
@@ -543,6 +563,11 @@ ul#partners-list li {
   padding: 3em 0 1.5em;
 }
 
+#footer-about {
+  background-color: var(--dark-color);
+  padding: 3em 0 1.5em;
+}
+
 #footer-container {
   display: flex;
   width: 90%;
@@ -587,7 +612,8 @@ ul#footer-social .link-social-footer svg:hover {
   transform: scale(108%);
 }
 
-#footer-trademark {
+#footer-trademark,
+#footer-trademark-about {
   width: 60%;
   padding: 0;
   color: var(--middle-color);
@@ -596,15 +622,21 @@ ul#footer-social .link-social-footer svg:hover {
   line-height: 13px;
 }
 
-#footer-trademark h6 {
+#footer-trademark-about {
+  color: var(--light-color);
+}
+
+#footer-trademark h6,
+#footer-trademark-about h6 {
   font-size: 15px;
   font-weight: 600;
   margin: 0;
   padding: 0;
 }
 
-#footer-trademark a {
-  color: var(--dark-color);
+#footer-trademark a,
+#footer-trademark-about a {
+  color: var(--middle-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -737,6 +769,14 @@ ul#footer-social .link-social-footer svg:hover {
     width: 50%;
     height: 40%;
     flex: 1 0 40%;
+  }
+
+  .program-btn {
+    display: block;
+  }
+
+  .join-btn {
+    display: none;
   }
 
   #speaker-container {
